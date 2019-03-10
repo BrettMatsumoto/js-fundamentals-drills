@@ -27,6 +27,17 @@ function doubleArray(arr){
  */
 var sumArrays;
 
+function sumArrays(arr,arr2){
+  var total =0;
+  for (i=0;i<arr.length;i++){
+    total += arr[i];
+  }
+  for (i=0;i<arr.length;i++){
+    total += arr2[i];
+  }
+  return total;
+}
+
 /* #stringCount
  *
  * Takes in a string and returns the length of the string.
@@ -375,7 +386,7 @@ var tupleConvertToObject;
 
 module.exports = {
   doubleArray: doubleArray,
-  sumArrays: null,
+  sumArrays: sumArrays,
   stringCount: null,
   arrayLength: null,
   countAll: null,

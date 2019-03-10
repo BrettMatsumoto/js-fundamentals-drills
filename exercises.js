@@ -5,7 +5,17 @@
  * @param {Array} // [1,2,3]
  * @return {Array} // [2,4,6]
  */
+
 var doubleArray;
+
+function doubleArray(arr){
+  var doubleArray = [];
+  for (i=0; i < arr.length; i++){
+    doubleArray.push(arr[i]*2)
+  }
+  return doubleArray;
+}
+
 
 /* #sumArrays
  *
@@ -364,7 +374,7 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
+  doubleArray: doubleArray,
   sumArrays: null,
   stringCount: null,
   arrayLength: null,

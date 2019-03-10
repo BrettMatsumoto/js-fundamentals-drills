@@ -299,6 +299,9 @@ function countObjects(arr){
  * @return {Array}
  */
 var getObjectKeys;
+function getObjectKeys(obj){
+  return Object.keys(obj)
+}
 
 /* #getObjectValues
  *
@@ -504,7 +507,7 @@ module.exports = {
   sumAllPositive: sumAllPositive,
   stringCountBelowThree: stringCountBelowThree,
   countObjects: countObjects,
-  getObjectKeys: null,
+  getObjectKeys: getObjectKeys,
   getObjectValues: null,
   makeObject: null,
   makeObjectReverse: null,

@@ -253,6 +253,14 @@ function multiplyAll(arr){
  * @return {Number}
  */
 var sumAllPositive;
+function sumAllPositive(arr){
+  var sum = 0;
+  for (i=0;i<arr.length;i++){
+    if (i > 0){
+      sum = sum + arr[i];
+    }
+  } return sum
+}
 
 /* #stringCountBelowThree
  *
@@ -482,7 +490,7 @@ module.exports = {
   sumBelowTen: sumBelowTen,
   moreThanTenLetters: moreThanTenLetters,
   multiplyAll: multiplyAll,
-  sumAllPositive: null,
+  sumAllPositive: sumAllPositive,
   stringCountBelowThree: null,
   countObjects: null,
   getObjectKeys: null,

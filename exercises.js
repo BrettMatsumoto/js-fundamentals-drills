@@ -202,7 +202,18 @@ function lengthOfLast(arr){
  * @return {Number}
  */
 var sumBelowTen;
-
+function sumBelowTen(arr){
+  sum = 0;
+  for(i=0;i<arr.length;i++){
+    sum = arr[i] + arr[i+1]
+    if (arr[i+1] === undefined){
+      arr[i+1] = 0
+    }
+  if (sum < 10){
+    return sum
+  }
+  }
+}
 /* #moreThanTenLetters
  *
  * Takes in an array of strings and returns the amount of elements that have more than ten letters.
@@ -455,7 +466,7 @@ module.exports = {
   poppedArray: poppedArray,
   splitString: splitString,
   lengthOfLast: lengthOfLast,
-  sumBelowTen: null,
+  sumBelowTen: sumBelowTen,
   moreThanTenLetters: null,
   multiplyAll: null,
   sumAllPositive: null,

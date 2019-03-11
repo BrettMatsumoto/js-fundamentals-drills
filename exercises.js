@@ -32,7 +32,7 @@ function sumArrays(arr,arr2){
   for (i=0;i<arr.length;i++){
     total += arr[i];
   }
-  for (i=0;i<arr.length;i++){
+  for (i=0;i<arr2.length;i++){
     total += arr2[i];
   }
   return total;
@@ -324,6 +324,10 @@ function getObjectValues(obj){
  * @return {Object}
  */
 var makeObject;
+function makeObject(key,value){
+  this.key = key;
+  this.value = value;
+}
 
 /* #makeObjectReverse
  *

@@ -341,7 +341,12 @@ function makeObject(key,value){
  * @return {Object}
  */
 var makeObjectReverse;
-
+function makeObjectReverse(value, key){
+  obj = {
+    [key]: value
+  }
+  return obj
+}
 /* #tupleToObject
  *
  * Takes in a tuple (an array with two elements) and returns it into a single key-value pair in an object.
@@ -520,7 +525,7 @@ module.exports = {
   getObjectKeys: getObjectKeys,
   getObjectValues: getObjectValues,
   makeObject: makeObject,
-  makeObjectReverse: null,
+  makeObjectReverse: makeObjectReverse,
   tupleToObject: null,
   tupleToObjectReverse: null,
   strToKeys: null,

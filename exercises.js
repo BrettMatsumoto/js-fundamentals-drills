@@ -474,7 +474,10 @@ function arraysToObject(arr,arr2){
  * @return {Array}
  */
 var objectsToTuples;
-
+function objectsToTuples(obj,obj2){
+  var newObj = Object.assign(obj, obj2)
+  return Object.entries(newObj)
+}
 /* #mapArrayValues
  *
  * takes in an array of strings and returns an object with keys of the array elements and values all set to True.
@@ -576,7 +579,7 @@ module.exports = {
   objectToArray: objectToArray,
   arrayToObject: arrayToObject,
   arraysToObject: arraysToObject,
-  objectsToTuples: null,
+  objectsToTuples: objectsToTuples,
   mapArrayValues: null,
   mapStringCounts: null,
   arrayToObjectNums: null,

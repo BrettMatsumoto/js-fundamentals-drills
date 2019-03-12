@@ -504,6 +504,12 @@ function mapArrayValues(arr){
  * @return {Object}
  */
 var mapStringCounts;
+function mapStringCounts(arr){
+  var obj = {};
+  for (i=0;i<arr.length;i++){
+    if (arr[i].length >= 5)
+  }
+}
 
 /* #arrayToObjectNums
  *

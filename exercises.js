@@ -486,6 +486,13 @@ function objectsToTuples(obj,obj2){
  * @return {Object}
  */
 var mapArrayValues;
+function mapArrayValues(arr){
+  var obj = {};
+  for (i=0;i<arr.length;i++){
+    obj[arr[i]] = true;
+  }
+  return obj
+}
 
 /* #mapStringCounts
  *
@@ -580,7 +587,7 @@ module.exports = {
   arrayToObject: arrayToObject,
   arraysToObject: arraysToObject,
   objectsToTuples: objectsToTuples,
-  mapArrayValues: null,
+  mapArrayValues: mapArrayValues,
   mapStringCounts: null,
   arrayToObjectNums: null,
   stringToKeys: null,

@@ -412,6 +412,9 @@ function getValues(obj){
  * @return {Array}
  */
 var getKeys;
+function getKeys(obj){
+  return Object.keys(obj)
+}
 
 /* #objectToArray
  *
@@ -551,7 +554,7 @@ module.exports = {
   tupleToObjectReverse: tupleToObjectReverse,
   strToKeys: strToKeys,
   getValues: getValues,
-  getKeys: null,
+  getKeys: getKeys,
   objectToArray: null,
   arrayToObject: null,
   arraysToObject: null,

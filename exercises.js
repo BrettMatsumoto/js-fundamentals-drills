@@ -525,6 +525,13 @@ function mapStringCounts(arr){
  * @return {Object}
  */
 var arrayToObjectNums;
+function arrayToObjectNums(arr){
+  var obj = {};
+  for (var i = 0;i<arr.length;i++){
+    obj[arr[i]] = true;
+  }
+  return obj
+}
 
 /* #stringToKeys
  *
@@ -600,7 +607,7 @@ module.exports = {
   objectsToTuples: objectsToTuples,
   mapArrayValues: mapArrayValues,
   mapStringCounts: mapStringCounts,
-  arrayToObjectNums: null,
+  arrayToObjectNums: arrayToObjectNums,
   stringToKeys: null,
   charCountMap: null,
   frequencyMap: null,

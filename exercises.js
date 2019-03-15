@@ -506,12 +506,11 @@ function mapArrayValues(arr){
 var mapStringCounts;
 function mapStringCounts(arr){
   var obj = {};
-  for (i=0;i<arr.length; i++){
-    Object.assign(arr[i])
+  for (var i=0;i<arr.length;i++){
     if (arr[i].length >= 5){
-      arr[i] = true;
+      obj[arr[i]] = true;
     } else {
-      arr[i] = false;
+      obj[arr[i]] = false;
     }
   }
   return obj

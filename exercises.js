@@ -459,7 +459,7 @@ function arrayToObject(arr){
 var arraysToObject;
 function arraysToObject(arr,arr2){
   var obj = {};
-  for (i=0;i<arr.length && arr2.length;i++){
+  for (i=0;i<arr.length;i++){
     obj[arr[i]] = arr2[i]
   }
   return obj
@@ -506,9 +506,15 @@ function mapArrayValues(arr){
 var mapStringCounts;
 function mapStringCounts(arr){
   var obj = {};
-  for (i=0;i<arr.length;i++){
-    if (arr[i].length >= 5)
+  for (i=0;i<arr.length; i++){
+    Object.assign(arr[i])
+    if (arr[i].length >= 5){
+      arr[i] = true;
+    } else {
+      arr[i] = false;
+    }
   }
+  return obj
 }
 
 /* #arrayToObjectNums
@@ -594,7 +600,7 @@ module.exports = {
   arraysToObject: arraysToObject,
   objectsToTuples: objectsToTuples,
   mapArrayValues: mapArrayValues,
-  mapStringCounts: null,
+  mapStringCounts: mapStringCounts,
   arrayToObjectNums: null,
   stringToKeys: null,
   charCountMap: null,
